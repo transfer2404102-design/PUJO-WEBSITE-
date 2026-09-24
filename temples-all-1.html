@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>সব মন্দির — চট্টলার পুজো</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .list-page-head{max-width:900px; margin:130px auto 46px; padding:0 24px; text-align:center;}
+  .list-page-wrap{max-width:1180px; margin:0 auto; padding:0 24px 40px;}
+</style>
+</head>
+<body>
+<div class="ambient"><span class="g1"></span><span class="g2"></span></div>
+
+<header class="navbar glass">
+  <div class="nav-brand">
+    <span class="logo bn">চট্টলার পুজো</span>
+    <span class="sub bn">চট্টগ্রাম• সংস্কৃতি • ঐতিহ্য • উৎসব</span>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#temples">Heritage</a>
+    <a href="index.html#updates">Updates</a>
+    <a href="index.html#gallery">Pujography</a>
+    <a href="index.html#sounds">Sounds</a>
+    <a href="index.html#reels">Reels</a>
+    <a href="index.html#kahini">Kahini</a>
+  </nav>
+</header>
+
+<div class="list-page-head">
+  <div class="kicker">🛕 Chattogram Temple Heritage</div>
+  <h2 class="bn" style="font-size:clamp(1.7rem,4vw,2.5rem); color:var(--cream); margin:14px 0;">সব মন্দির</h2>
+  <p class="bn" style="color:var(--cream-dim);">ইতিহাসের পাতায় চট্টগ্রামের প্রতিটি মন্দিরের নিজস্ব যাত্রা — প্রতিষ্ঠা থেকে বর্তমান।</p>
+</div>
+
+<div class="list-page-wrap"><div class="temple-grid" id="templeGridAll"></div></div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo bn">চট্টলার পুজো</div>
+      <p class="bn">চট্টগ্রামের পুজো, ঐতিহ্য ও স্মৃতির ডিজিটাল সংরক্ষণ।</p>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="index.html#temples">Temple Heritage</a>
+      <a href="index.html#gallery">Pujography</a>
+      <a href="index.html#sounds">Puja Sounds</a>
+      <a href="index.html#kahini">Kahini · Mantra · Slok</a>
+    </div>
+    <div>
+      <h4>Contribute</h4>
+      <a href="index.html#gallery">Submit Photo</a>
+      <a href="index.html#kahini">Submit Story</a>
+      <a href="index.html#updates">Submit Puja</a>
+      <a href="index.html">Media Guidelines</a>
+    </div>
+    <div>
+      <h4>About</h4>
+      <a href="index.html">About Us</a>
+      <a href="index.html">Contact</a>
+      <a href="index.html">Copyright</a>
+      <a href="index.html">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Made with ❤️ for Chattogram's cultural heritage</span>
+    <span>© 2026 চট্টলার পুজো · <a href="index.html" style="color:var(--cream-dim);">Admin</a></span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+  const grid = document.getElementById('templeGridAll');
+  temples.forEach(t => grid.insertAdjacentHTML('beforeend', renderTempleCardHTML(t)));
+</script>
+</body>
+</html>
